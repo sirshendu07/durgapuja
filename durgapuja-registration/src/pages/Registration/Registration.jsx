@@ -23,6 +23,7 @@ export default function Registration() {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(data),
       });
+      
 
       const result = await response.json();
 
