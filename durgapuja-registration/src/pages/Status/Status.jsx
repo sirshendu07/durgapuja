@@ -12,7 +12,7 @@ export default function Status() {
 
   const onSubmit = async (data) => {
     try {
-      const response = await fetch(`http://localhost:5000/api/status/${data.phone}`);
+      const response = await fetch(`https://durgapuja-rl3z.onrender.com/api/status/${data.phone}`);
       const result = await response.json();
 
       if (response.ok) {
