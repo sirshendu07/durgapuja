@@ -1,0 +1,18 @@
+.event-list-container {
+  width: 100%;
+}
+
+.section-title {
+  font-size: 1.3rem;
+  color: #ffffff;
+  margin-bottom: 15px;
+  font-weight: 600;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding-bottom: 10px;
+}
+
+.event-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}

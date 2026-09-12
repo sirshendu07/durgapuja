@@ -1,0 +1,248 @@
+.registration-container {
+  width: 100%;
+  min-height: 100vh;
+  padding: 20px;
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 25px;
+  margin-top: 15px;
+}
+
+.icon-btn {
+  background: none;
+  border: none;
+  color: #a0aec0;
+  cursor: pointer;
+  padding: 5px;
+}
+
+.form-header h2 {
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+/* Glassmorphism Form */
+.glass-form {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 25px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Form Groups & Inputs */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+label {
+  font-size: 0.9rem;
+  color: #cbd5e1;
+  font-weight: 500;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="tel"],
+select {
+  width: 100%;
+  background: rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: white;
+  padding: 12px 15px;
+  border-radius: 10px;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+input:focus, select:focus {
+  border-color: #3b82f6;
+}
+
+select option {
+  background-color: #0f172a;
+  color: white;
+}
+
+/* Radios and Checkboxes */
+.radio-group {
+  display: flex;
+  gap: 20px;
+  background: rgba(0, 0, 0, 0.2);
+  padding: 12px 15px;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.radio-group label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  color: white;
+}
+
+.checkbox-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  background: rgba(0, 0, 0, 0.2);
+  padding: 15px;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: white;
+  cursor: pointer;
+}
+
+/* Conditional Fields Animation */
+.conditional-fields {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background: rgba(59, 130, 246, 0.1); /* Slight blue tint */
+  padding: 15px;
+  border-radius: 10px;
+  border: 1px solid rgba(59, 130, 246, 0.3);
+}
+
+.animation-fade-in {
+  animation: fadeIn 0.4s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Error Text */
+.error {
+  color: #ef4444;
+  font-size: 0.8rem;
+}
+
+/* Submit Button & States */
+.submit-btn {
+  background: linear-gradient(135deg, #3b82f6, #2563eb);
+  color: white;
+  border: none;
+  padding: 16px;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px;
+  transition: all 0.3s;
+}
+
+.submit-btn:hover:not(:disabled) {
+  box-shadow: 0 5px 15px rgba(59, 130, 246, 0.4);
+}
+
+.submit-btn:disabled {
+  background: #475569;
+  cursor: not-allowed;
+  opacity: 0.8;
+}
+
+.spinner {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* Success Screen */
+.success-container {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 20px;
+}
+
+.success-container h2 {
+  color: #4ade80;
+  font-size: 2rem;
+}
+
+.success-container p {
+  color: #94a3b8;
+  font-size: 1.1rem;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+.back-btn {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: white;
+  padding: 12px 30px;
+  border-radius: 30px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+
+
+
+/* --- Dynamic Event Fields Styling --- */
+.dynamic-section-title {
+  color: #60a5fa;
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+  border-bottom: 1px solid rgba(59, 130, 246, 0.3);
+  padding-bottom: 8px;
+}
+
+.event-detail-group {
+  background: rgba(0, 0, 0, 0.15); /* Slightly darker inner box */
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.event-detail-group:last-child {
+  margin-bottom: 0;
+}
+
+.event-detail-header {
+  color: #e2e8f0;
+  font-size: 1rem;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}

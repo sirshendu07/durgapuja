@@ -1,0 +1,104 @@
+.home-container {
+  width: 100%;
+  min-height: 100vh;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  max-width: 500px; /* Perfect width constraint for mobile view */
+  margin: 0 auto;
+  position: relative; 
+}
+
+/* --- Mobile-Optimized Durga Watermark --- */
+.home-container::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  /* High-contrast motif optimized for mobile portrait view */
+  background-image: url('https://cdn-icons-png.flaticon.com/512/7786/7786016.png');
+  background-size: 90vw; /* Scales precisely to mobile screen width */
+  background-position: center 60%; /* Centers slightly lower to fit behind content nicely */
+  background-repeat: no-repeat;
+  opacity: 0.035; /* Subtle background glow */
+  pointer-events: none; 
+  z-index: -1;
+  filter: invert(1); 
+}
+
+.home-header {
+  margin-top: 20px;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+.home-header h2 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: 1px;
+}
+
+.home-header p {
+  color: #a0aec0;
+  font-size: 0.95rem;
+  margin-top: 5px;
+}
+
+.home-main {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+/* --- Events Section --- */
+.events-section {
+  width: 100%;
+}
+
+.section-title {
+  font-size: 1.15rem;
+  color: #ffffff;
+  margin-bottom: 15px;
+  font-weight: 600;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding-bottom: 8px;
+}
+
+.events-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Two columns layout fits mobile screens perfectly */
+  gap: 12px;
+}
+
+.event-badge {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  padding: 14px 12px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  backdrop-filter: blur(10px);
+  color: #e2e8f0;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.event-icon {
+  color: #60a5fa;
+  display: flex;
+  align-items: center;
+}
+
+/* --- Desktop Scaling Adjustments --- */
+@media (min-width: 768px) {
+  .home-container {
+    max-width: 700px;
+  }
+  .home-container::before {
+    background-size: 40vh; /* Adjusts background size for larger desktop monitors */
+  }
+}

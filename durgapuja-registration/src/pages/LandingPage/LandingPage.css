@@ -1,0 +1,87 @@
+.landing-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  width: 100%;
+  padding: 20px;
+  text-align: center;
+  overflow: hidden;
+}
+
+/* --- Animations --- */
+@keyframes fadeUp {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-5px); }
+  100% { transform: translateY(0px); }
+}
+
+/* --- Typography & Layout --- */
+.animation-wrapper {
+  animation: fadeUp 1.2s ease-out forwards;
+  margin-bottom: 3rem;
+  width: 100%;
+}
+
+.durga-text {
+  font-size: 2.5rem; /* Scaled down for mobile */
+  font-weight: 800;
+  color: #ffffff; 
+  letter-spacing: 2px;
+  margin-bottom: 0.8rem;
+  text-shadow: 0 0 20px rgba(255, 255, 255, 0.2); 
+}
+
+.society-text {
+  font-size: 0.85rem; /* Smaller to fit the long name */
+  line-height: 1.5;
+  color: #a0aec0; 
+  font-weight: 400;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: 0 10px;
+}
+
+/* --- Elegant Glass Button --- */
+.enter-button {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+  border-radius: 30px; 
+  padding: 14px 45px;
+  font-size: 1.1rem;
+  font-weight: 500;
+  letter-spacing: 1px;
+  cursor: pointer;
+  animation: fadeUp 1.2s ease-out 0.4s forwards, float 3s ease-in-out infinite 1.5s; 
+  opacity: 0; 
+  transition: all 0.3s ease;
+}
+
+.enter-button:active {
+  transform: translateY(1px);
+}
+
+/* --- Desktop Responsiveness --- */
+@media (min-width: 768px) {
+  .durga-text {
+    font-size: 5rem;
+    letter-spacing: 4px;
+  }
+  .society-text {
+    font-size: 1.2rem;
+    padding: 0 50px;
+  }
+  .enter-button {
+    font-size: 1.3rem;
+    padding: 16px 55px;
+  }
+}

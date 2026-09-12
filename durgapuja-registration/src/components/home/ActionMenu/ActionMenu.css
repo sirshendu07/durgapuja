@@ -1,0 +1,51 @@
+.action-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
+}
+
+.action-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 16px;
+  border-radius: 16px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  transition: all 0.3s ease;
+  width: 100%;
+}
+
+.primary-btn {
+  background: linear-gradient(135deg, #1e5aff, #0033cc);
+  color: white;
+  box-shadow: 0 8px 20px rgba(30, 90, 255, 0.3);
+}
+
+.primary-btn:active {
+  transform: scale(0.98);
+}
+
+.secondary-actions {
+  display: flex;
+  gap: 15px;
+  width: 100%;
+}
+
+.glass-btn {
+  flex: 1; /* Makes buttons split space equally */
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #e2e8f0;
+  font-size: 1rem;
+}
+
+.glass-btn:active {
+  background: rgba(255, 255, 255, 0.1);
+}
